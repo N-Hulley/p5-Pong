@@ -19,7 +19,8 @@ const Ball = function(colour) {
         // bottom
         else if(this.pos.y >= (height - this.size.y/2) && this.vel.y > 0) 
             this.vel.y *=-1;
-    
+        
+        if (this.pos.x > width || this.pos.x < 0) playing = false;
     }
 
     this.update = function() {
